@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.LibroOnline.com"
+    targetNamespace="http://www.LibroOnline.com"
+    elementFormDefault="qualified">
+
+<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+<!--Tende alla Veneziana-->
+<xsd:element name="Libri" type="tLibri"/>
+
+<xsd:complexType name="tLibri">
+<xsd:sequence maxOccurs="unbounded">
+<xsd:element name="libro" type="tLibro"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tLibro">
+<xsd:sequence>
+<xsd:element name="titolo" type="xsd:string"/>
+<xsd:element name="sottotitolo" type="xsd:string" minOccurs="0"/>
+<xsd:element name="autore" type="tAutore" maxOccurs="unbounded"/>
+<xsd:element name="annoPubblicazione" type="xsd:gYear"/>
+<xsd:element name="edizione" type="tEdizione"/>
+<xsd:element name="trama" type="testo"/>
+<xsd:element name="copertina" type="Timg"/>
+<xsd:element name="prezzo" type="tPrezzo"/>
+<xsd:element name="quantita" type="xsd:integer"/>
+</xsd:sequence>
+<xsd:attribute name="ISBN" type="tIsbn" use="required"/>
+<xsd:attribute name="lang" type="xsd:language" use="required"/>
+<xsd:attribute name="identita" type="xsd:anyURI" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="tAutore">
+<xsd:sequence>
+<xsd:element name="nome" type="xsd:string"/>
+<xsd:element name="cognome" type="xsd:string"/>
+<xsd:element name="secondoNome" type="xsd:string" minOccurs="0"/>
+</xsd:sequence>
+<xsd:attribute name="identita" type="xsd:anyURI"/>
+</xsd:complexType>
+
+<xsd:simpleType name="tIsbn">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="\d{3}-\d{1,7}-\d{1,7}-\d{1,7}-\d{1}" />
+<!--Il codice isbn e' formato di 13 cifre raggruppate in 5 settori. Solo il primo e l'ultimo hanno lunghezza fissa (risp. di 3 e 1 cifre)-->
+</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="tEdizione">
+<xsd:sequence>
+<xsd:element name="casaEditrice" type="xsd:string"/>
+<xsd:element name="edizione" type="xsd:integer" minOccurs="0"/>
+<xsd:element name="collana" type="xsd:string" minOccurs="0"/>
+<xsd:element name="annoEdizione" type="xsd:gYear" minOccurs="0"/>
+<xsd:element name="ristampa" type="xsd:gYear" minOccurs="0"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tPrezzo">
+<xsd:attribute name="importo" type="xsd:decimal"/>
+<xsd:attribute name="moneta" type="xsd:string"/>
+</xsd:complexType>
+
+<xsd:complexType name="testo">
+<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+<xsd:element name="img" type="Timg" minOccurs="0"/>
+<xsd:element name="p" type="TP" />
+<xsd:element name="img" type="Timg" minOccurs="0"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="TP" mixed="true">
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element name="span" type="TSpan" />
+<xsd:element name="a" type="TA" />
+<xsd:element name="abbr" type="TAbbr" />
+<xsd:element name="em" type="xsd:string"/>
+<xsd:element name="strong" type="xsd:string"/>
+<xsd:element name="img" type="Timg"/>
+</xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="TSpan">
+<xsd:simpleContent>
+<xsd:extension base="xsd:string">
+<xsd:attribute ref="xml:lang" />
+</xsd:extension>
+</xsd:simpleContent>
+</xsd:complexType>
+	
+<xsd:complexType name="TAbbr">
+<xsd:simpleContent>
+<xsd:extension base="xsd:string">
+<xsd:attribute name="title" type="xsd:string" />
+<xsd:attribute ref="xml:lang" />
+</xsd:extension>
+</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:complexType name="TA">
+<xsd:simpleContent>
+<xsd:extension base="xsd:string">
+<xsd:attribute name="href" type="xsd:anyURI" use="required" />
+<xsd:attribute ref="xml:lang" />
+</xsd:extension>
+</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:complexType name="Timg">
+<xsd:attribute name="src" type="xsd:anyURI" use="required" />
+<xsd:attribute name="alt" type="xsd:string" />
+<xsd:attribute name="id" type="xsd:string" />
+<xsd:attribute name="class" type="xsd:string" />
+</xsd:complexType>
+
+</xsd:schema>

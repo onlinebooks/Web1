@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.LibroOnline.com" xmlns:x="http://www.LibroOnline.com"
+ xsi:schemaLocation="http://www.LibroOnline.com libri.xsd">
+
+<libro ISBN="978-88-06-21646-7" lang="it" identita="http://it.dbpedia.org/resource/Norwegian_Wood_(romanzo)">
+<titolo>Norwegian wood</titolo>
+<sottotitolo>Tokyo blues</sottotitolo>
+<autore identita="it.dbpedia.org/resource/Haruki_Murakami">
+	<nome>Haruki</nome>
+	<cognome>Murakami</cognome>
+</autore>
+<annoPubblicazione>1987</annoPubblicazione>
+<edizione>
+	<casaEditrice>Einaudi</casaEditrice>
+	<edizione>1</edizione>
+	<collana>Super ET</collana>
+	<annoEdizione>2006</annoEdizione>
+	<ristampa>2015</ristampa>
+</edizione>
+<trama>
+<p>Uno dei più clamorosi successi letterari giapponesi di tutti i tempi è anche il libro più intimo, introspettivo di Murakami, che qui si stacca dalle
+atmosfere oniriche e surreali che lo hanno reso famoso, per esplorare il mondo in ombra dei sentimenti e della solitudine.</p>
+<p><span xml:lang="en">Norwegian wood</span> è anche un grande romanzo sull'adolescenza, sul conflitto tra il desiderio di essere integrati nel mondo
+degli altri per entrare vittoriosi nella vita adulta e il bisogno irrinunciabile di essere sé stessi, costi quel che costi. Come il giovane Holden, Toru è continuamente assalito dal dubbio di aver sbagliato o poter sbagliare nelle sue scelte di vita e di amore, ma è anche guidato da un ostinato e personale senso della morale e da un'istintiva avversione per tutto ciò che sa di costruito. Diviso tra due ragazze, Naoko e Midori, che lo attirano entrambe con forza irresistibile, Toru non può fare altro che decidere. O aspettare che la vita(e la morte) decidano per lui.</p>
+</trama>
+<copertina src="resources/libri/Norwegian_wood.png" alt="copertina di Norwegian wood"/>
+<prezzo importo="14.00" moneta="euro" />
+<quantita>100</quantita>
+</libro>
+
+</x:libri>

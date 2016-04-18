@@ -1,0 +1,49 @@
+% importa variabili globali
+\input {../template/config.tex}
+
+
+% definizione variabili locali
+\def\DOCUMENTO{Relazione}
+\def\VERSIONE{1.0.0}
+
+\def\DESCRIZIONE{<Info documento>}
+
+\def\REDATTORE {Francesco Bizzaro\\ & Gino Zaidan}
+\def\VERIFICATORE {Luca Finotello\\ & Stefano Scaglione}
+\def\RESPONSABILE {Bizzaro Francesco}
+
+\def\USO {Interno}
+
+\def\DISTRIBUZIONE {\GRUPPO{}\\ & \COMMITTENTE{}\\}
+
+\def\DESCRIZIONE {Relazione del progetto \textit{\PROGETTO}, realizzato per il corso di \textit{tecnologie web} dal gruppo \GRUPPO}
+
+
+% abilita (true) / disabilita (false) indice, lista tabelle, lista figure
+\def\INDICE	{true}
+\def\TABELLE {false}
+\def\FIGURE {false}
+
+
+% importa struttura
+\input {../template/structure.tex}
+
+
+% importa indici
+\input {../template/index.tex}
+
+% importa parti documento
+\input {sezioni/1_organigramma.tex}
+\input {sezioni/2_scopo.tex}
+\input {sezioni/3_norme.tex}
+\input {sezioni/4_analisi_requisiti.tex}
+\input{sezioni/5_progettazione.tex}
+
+%\input {sections/nomesezione}
+%\newpage
+
+% ...
+
+%\printglossaries
+
+\end{document}
