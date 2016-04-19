@@ -18,8 +18,8 @@
 <body>
 	<div id="header">
 		<span id="logo"></span>
-		<h1> Libronline</h1>
-		<h2> il tuo libro a portata di mano ovunque sei</h2>
+		<h1>Libronline</h1>
+		<h2>il tuo libro a portata di mano ovunque sei</h2>
 	</div>
 	
 	<div id="main">	
@@ -27,19 +27,19 @@
 		<div id="menu">
 			<ul>
 				<li><span class="selected" xml:lang="en">Home</span></li>
-				<li><a href="libri.html" tabindex="1">Libri</a></li>
-				<li><a href="contatti.html" tabindex="2">Contatti</a></li>	
-				<li><a href="registrazione.html" tabindex="3">Registrati</a></li>
-				<li><a href="login.html" tabindex="4">Entra</a></li>
+				<li><a href="libri.html" tabindex="1">Catalogo</a></li>
+				<li><a href="servizi.html" tabindex="2">Servizi</a></li>	
+				<li><a href="contatti.html" tabindex="3">Contatti</a></li>
 			</ul>
 		</div>
 
 		<div id="contenuto">
 		
-			<span id="path">Ti trovi in: Home </span>
-			<h3> Libri consigliati della settimana:</h3>
+			
+			<span id="path">Ti trovi in: <span xml:lang="en">Home</span></span>
+			<h3>Libri consigliati della settimana:</h3>
 
-			<div class="contenitore-img">
+			<div class="contenitoreImg">
 				<div class="immagine">
 					<img src="immagini/Divergent.jpg" alt="Copertina Divergent"/>
 					<a href="#" class="bottone">Scopri di pi&ugrave;</a>
@@ -56,15 +56,14 @@
 					<img src="immagini/vale.jpeg" alt="Copertina Valentino"/>
 					<a href="#" class="bottone">Scopri di pi&ugrave;</a>
 				</div>
-				<div class="immagine">
-					<img src="immagini/anna_karenina.jpg" alt="Copertina Anna Karenina"/>
-					<a href="#" class="bottone">Scopri di pi&ugrave;</a>
-				</div>
+
 			</div>
+			
+			
 
 			<h3>Le ultime novit&agrave; da non perdere!</h3>
 
-			<div class="contenitore-img">
+			<div class="contenitoreImg">
 				<div class="immagine">
 					<img src="immagini/delitto-e-castigo-dostoevskij.jpg" alt="Copertina Delitto e castigo"/>
 				</div>
@@ -77,18 +76,32 @@
 				<div class="immagine">
 					<img src="immagini/neve_di_primavera_mishima.png" alt="Copertina Neve di primavera"/>
 				</div>
-				<div class="immagine">
-					<img src="immagini/norwegian_wood.jpg" alt="Copertina Norwegian wood"/>
-				</div>
 			</div>			
-			
+		
 
+		
 
 		</div>
+		
+		<div id="divLogin">
+			<form id="formLogin" action="index.html" method="post">
+			<fieldset>
+				<legend>Login</legend>
+				<input title="username" type="text" name="username" value="Username"/>
+				<input title="password" type="password" name="password" value="Password"/>
+				<input id="pulsanteSubmit" type="submit" value="Login"/>
+				<a href="#">Registrati</a>
+			</fieldset>
+			</form>
+		</div>
+		
 	</div>
 
 	<div id="footer">
 		via ugo bassi libreria libronline
 	</div>
+	
+	
+	
 </body>
 </html>

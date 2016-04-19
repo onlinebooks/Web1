@@ -11,8 +11,8 @@ color:#191970;
 #header{
 	width:90%;
 	margin:0 auto;
-	border-bottom:2em solid #191970;
 	color:#191970;
+	border-bottom:2em solid #191970;
 }
 
 #header h1{	
@@ -58,8 +58,9 @@ color:#191970;
 }
 
 #contenuto{
-	width:85%;
+	width:60%;
 	float:left;
+
 }
 
 #footer{
@@ -76,6 +77,46 @@ color:#191970;
 }
 
 
+/* div per il Login */
+#divLogin{
+	width: 25%;
+    display: table;
+	margin-top:2.7%;
+}
+
+#divLogin a{
+	text-decoration:none;
+	color:#708090;
+}
+
+#divLogin a:hover{
+	color:#87CEEB;
+}
+
+#formLogin{
+	
+	border:1px solid #87CEEB;
+	padding:0.5em;
+	width:90%;
+	margin:0 auto;
+}
+#formLogin fieldset{
+	border:none;
+}
+
+#formLogin input{
+	width: 90%;
+    line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+	font-size:1em;
+    margin:0 auto;
+	margin-top:0.5em;
+}
+
+#formLogin input[type=submit]{
+	width:30%;
+}
+
 /* INDEX */
 
 h3{
@@ -87,7 +128,7 @@ h3{
 	padding:0.5%;
 }
 
-.contenitore-img{
+.contenitoreImg{
 	background-color:white;
 	margin-bottom:2%;
 	display:table;
@@ -235,3 +276,4 @@ float:right;
 }
 
 /* Fine Login */
+
