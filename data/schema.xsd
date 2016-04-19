@@ -6,7 +6,19 @@
 
 <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 <!--Tende alla Veneziana-->
-<xsd:element name="Libri" type="tLibri"/>
+
+<xsd:element name="biblioteca" type="tBiblioteca"/>
+
+<xsd:complexType name="tBiblioteca">
+	<xsd:sequence>
+		<xsd:element name="Libri" type="tLibri"/>
+		<xsd:element name="Utenti" type="tUtenti"/>
+		<xsd:element name="Prenotazioni" type="tPrenotazioni"/>
+		<xsd:element name="Prestiti" type="tPrestiti"/>
+		<xsd:element name="Voti" type="tVoti"/>
+		<xsd:element name="Commenti" type="tCommenti"/>
+	</xsd:sequence>
+</xsd:complexType>
 
 <xsd:complexType name="tLibri">
 <xsd:sequence maxOccurs="unbounded">
@@ -105,6 +117,88 @@
 <xsd:attribute name="alt" type="xsd:string" />
 <xsd:attribute name="id" type="xsd:string" />
 <xsd:attribute name="class" type="xsd:string" />
+</xsd:complexType>
+
+
+
+
+<xsd:complexType name="tUtenti">
+	<xsd:sequence maxOccurs="unbounded">
+		<xsd:element name="utente" type="tUtente"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tUtente">
+	<xsd:sequence>
+		<xsd:element name="user" type="xsd:id"/>
+		<xsd:element name="nome" type="xsd:string"/>
+		<xsd:element name="secondoNome" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="cognome" type="xsd:string"/>
+		<xsd:element name="eta" type="xsd:integer"/>
+		<xsd:element name="mail" type="tMail"/>
+		<xsd:element name="numeroTessera" type="tTessera"/>
+		<xsd:element name="password" type="tPassword"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="tMail"/>
+<xsd:complexType name="tTessera"/>
+<xsd:complexType name="tPassword"/>
+
+
+
+<xsd:complexType name="tPrenotazioni">
+	<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+		<xsd:element name="prenotazione" type="tPrenotazione"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tPrenotazione">
+	<xsd:sequence>
+		<xsd:element name="libro" type="tIsbn"/>
+		<xsd:element name="utente" type="xsd:string"/>
+		<xsd:element name="dataInizio" type="xsd:date"/>
+		<xsd:element name="dataFine" type="xsd:date"/>
+		<xsd:element name="restituito" type="xsd:integer"/>
+		<xsd:element name="dataRestituzione" type="xsd:date" minOccurs="0"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tPrestiti">
+	<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+		<xsd:element name="prestito" type="tPrestito"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tPrestito"/>
+
+<xsd:complexType name="tVoti">
+	<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+		<xsd:element name="voto" type="tVoto"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tVoto">
+	<xsd:sequence>
+		<xsd:element name="libro" type="tIsbn"/>
+		<xsd:element name="utente" type="xsd:string"/>
+		<xsd:element name="voto" type="xsd:float"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tCommenti">
+	<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+		<xsd:element name="commento" type="tCommento"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tCommento">
+	<xsd:sequence>
+		<xsd:element name="libro" type="tIsbn"/>
+		<xsd:element name="utente" type="xsd:string"/>
+		<xsd:element name="commento" type="testo"/>
+	</xsd:sequence>
 </xsd:complexType>
 
 </xsd:schema>

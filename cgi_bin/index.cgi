@@ -1,4 +1,4 @@
- #!/usr/bin/perl
+#!C:\xampp\perl\bin\perl.exe
 
 use warnings;
 use strict;
@@ -48,7 +48,9 @@ print<<EOF;
 		<div id="contenuto">
 		
 			<span id="path">Ti trovi in: Home </span>
-			EOF
+
+EOF
+
 
 sub createSession() {
 		$session = new CGI::Session();
