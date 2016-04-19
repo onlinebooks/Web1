@@ -38,9 +38,9 @@ print<<EOF;
 		<div id="menu">
 			<ul>
 				<li><span class="selected" xml:lang="en">Home</span></li>
-				<li><a href="libri.html" tabindex="1">Libri</a></li>
-				<li><a href="contatti.html" tabindex="2">Contatti</a></li>	
-				<li><a href="registrazione.html" tabindex="3">Registrati</a></li>
+				<li><a href="libri.html" tabindex="1">Catalogo</a></li>
+				<li><a href="contatti.html" tabindex="2">Servizi</a></li>	
+				<li><a href="registrazione.html" tabindex="3">Contatti</a></li>
 				<li><a href="login.html" tabindex="4">Entra</a></li>
 			</ul>
 		</div>
@@ -97,7 +97,7 @@ if(!$password){
 	else{
 	
 print<<EOF;
-			<h3> Libri consigliati della settimana:</h3>
+			<h3> Le ultime novit&agrave; da non perdere!</h3>
 
 			<div class="contenitore-img">
 				<div class="immagine">
@@ -122,7 +122,7 @@ print<<EOF;
 				</div>
 			</div>
 
-			<h3>Le ultime novit&agrave; da non perdere!</h3>
+			<h3>I libri consigliati della settimana</h3>
 
 			<div class="contenitore-img">
 				<div class="immagine">
