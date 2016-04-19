@@ -58,7 +58,7 @@ color:#191970;
 }
 
 #contenuto{
-	width:60%;
+	width:85%;
 	float:left;
 
 }
@@ -76,6 +76,15 @@ color:#191970;
 	display:block;
 }
 
+#aLogin{
+	float:right;
+	text-decoration:none;
+	color:#708090;
+}
+
+#aLogin:hover{
+	color:#87CEEB;
+}
 
 /* div per il Login */
 #divLogin{
