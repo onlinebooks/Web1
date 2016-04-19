@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.LibroOnline.com"
+    targetNamespace="http://www.LibroOnline.com"
+    elementFormDefault="qualified">
+
+<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+<!--Tende alla Veneziana-->
+<xsd:element name="utenti" type="tUtenti"/>
+
+<xsd:complexType name="tUtenti">
+	<xsd:sequence maxOccurs="unbounded">
+		<xsd:element name="utente" type="tUtente"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="tUtente">
+	<xsd:sequence>
+		<xsd:element name="user" type="xsd:id"/>
+		<xsd:element name="nome" type="xsd:string"/>
+		<xsd:element name="secondoNome" type="xsd:string" minOccurs="0"/>
+		<xsd:element name="cognome" type="xsd:string"/>
+		<xsd:element name="eta" type="xsd:integer"/>
+		<xsd:element name="mail" type="tMail"/>
+		<xsd:element name="numeroTessera" type="tTessera"/>
+		<xsd:element name="password" type="tPassword"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="tMail"/>
+<xsd:complexType name="tTessera"/>
+<xsd:complexType name="tPassword"/>
+
+
+
+
+</xsd:schema>

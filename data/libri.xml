@@ -2,10 +2,10 @@
 <x:libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.LibroOnline.com" xmlns:x="http://www.LibroOnline.com"
  xsi:schemaLocation="http://www.LibroOnline.com libri.xsd">
 
-<libro ISBN="978-88-06-21646-7" lang="it" identita="http://it.dbpedia.org/resource/Norwegian_Wood_(romanzo)">
+<libro ISBN="978-88-06-21646-7" lang="it">
 <titolo>Norwegian wood</titolo>
 <sottotitolo>Tokyo blues</sottotitolo>
-<autore identita="it.dbpedia.org/resource/Haruki_Murakami">
+<autore>
 	<nome>Haruki</nome>
 	<cognome>Murakami</cognome>
 </autore>
