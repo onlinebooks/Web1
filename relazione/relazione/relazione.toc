@@ -7,16 +7,25 @@
 \contentsline {subsection}{\numberline {3.2}Strumenti}{2}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Codifica}{2}{subsection.3.3}
 \contentsline {section}{\numberline {4}Analisi dei requisiti}{3}{section.4}
-\contentsline {section}{\numberline {5}Progettazione}{3}{section.5}
-\contentsline {subsection}{\numberline {5.1}Home}{3}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Catalogo}{3}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Dettaglio}{4}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Servizi}{5}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Contatti}{5}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Prenotazione}{6}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Gestione prestiti}{6}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Profilo utente}{6}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}Amministrazione}{6}{subsection.5.9}
-\contentsline {subsubsection}{\numberline {5.9.1}Conferma account}{6}{subsubsection.5.9.1}
-\contentsline {subsubsection}{\numberline {5.9.2}Inserimento libro}{6}{subsubsection.5.9.2}
-\contentsline {subsubsection}{\numberline {5.9.3}Rimozione commento}{6}{subsubsection.5.9.3}
+\contentsline {subsection}{\numberline {4.1}Interazione degli utenti}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Aggiornamenti e amministrazione}{4}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Organizzazione e mappa del sito}{4}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Performance}{4}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Accessibilit\IeC {\`a}}{4}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Sicurezza}{4}{subsection.4.6}
+\contentsline {section}{\numberline {5}Progettazione}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}Home}{4}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Catalogo}{4}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Dettaglio}{5}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Servizi}{6}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Contatti}{6}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Prenotazione}{7}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Gestione prestiti}{7}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Profilo utente}{7}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Amministrazione}{7}{subsection.5.9}
+\contentsline {subsubsection}{\numberline {5.9.1}Conferma account}{7}{subsubsection.5.9.1}
+\contentsline {subsubsection}{\numberline {5.9.2}Inserimento libro}{7}{subsubsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.3}Rimozione commento}{7}{subsubsection.5.9.3}
+\contentsline {section}{\numberline {6}Implementazione}{8}{section.6}
+\contentsline {section}{\numberline {7}Verifica e validazione}{8}{section.7}
+\contentsline {section}{\numberline {8}Analisi di usabilit\IeC {\`a}}{8}{section.8}
