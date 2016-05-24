@@ -6,24 +6,37 @@
 \BOOKMARK [2][-]{subsection.3.3}{Codifica}{section.3}% 6
 \BOOKMARK [1][-]{section.4}{Analisi dei requisiti}{}% 7
 \BOOKMARK [2][-]{subsection.4.1}{Interazione degli utenti}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{Aggiornamenti e amministrazione}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{Organizzazione e mappa del sito}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.4}{Performance}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.5}{Accessibilit\340}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.6}{Sicurezza}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Progettazione}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Home}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Catalogo}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Dettaglio}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.4}{Servizi}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.5}{Contatti}{section.5}% 19
-\BOOKMARK [2][-]{subsection.5.6}{Prenotazione}{section.5}% 20
-\BOOKMARK [2][-]{subsection.5.7}{Gestione prestiti}{section.5}% 21
-\BOOKMARK [2][-]{subsection.5.8}{Profilo utente}{section.5}% 22
-\BOOKMARK [2][-]{subsection.5.9}{Amministrazione}{section.5}% 23
-\BOOKMARK [3][-]{subsubsection.5.9.1}{Conferma account}{subsection.5.9}% 24
-\BOOKMARK [3][-]{subsubsection.5.9.2}{Inserimento libro}{subsection.5.9}% 25
-\BOOKMARK [3][-]{subsubsection.5.9.3}{Rimozione commento}{subsection.5.9}% 26
-\BOOKMARK [1][-]{section.6}{Implementazione}{}% 27
-\BOOKMARK [1][-]{section.7}{Verifica e validazione}{}% 28
-\BOOKMARK [1][-]{section.8}{Analisi di usabilit\340}{}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.1}{UC1 - Ricerca libri}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.2}{UC2 - Visualizzazione classifiche}{subsection.4.1}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.3}{UC3 - Sign up}{subsection.4.1}% 11
+\BOOKMARK [3][-]{subsubsection.4.1.4}{UC4 - Login}{subsection.4.1}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.5}{UC5 - Prenotazione}{subsection.4.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.6}{UC6 - Gestione prenotazioni}{subsection.4.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.1.7}{UC7 - Gestione prestiti}{subsection.4.1}% 15
+\BOOKMARK [3][-]{subsubsection.4.1.8}{UC8 - Valutazione}{subsection.4.1}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.9}{UC9 - Consiglio}{subsection.4.1}% 17
+\BOOKMARK [3][-]{subsubsection.4.1.10}{UC10 - Commento}{subsection.4.1}% 18
+\BOOKMARK [3][-]{subsubsection.4.1.11}{UC11 - Conferma account}{subsection.4.1}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.12}{UC12 - Inserimento libro}{subsection.4.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.13}{UC13 - Cancellazione commento}{subsection.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Aggiornamenti e amministrazione}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.3}{Organizzazione e mappa del sito}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.4}{Performance}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.5}{Accessibilit\340}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.6}{Sicurezza}{section.4}% 26
+\BOOKMARK [1][-]{section.5}{Progettazione}{}% 27
+\BOOKMARK [2][-]{subsection.5.1}{Home}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.2}{Catalogo}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.3}{Dettaglio}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.4}{Servizi}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.5}{Contatti}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.6}{Prenotazione}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.7}{Gestione prestiti}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.8}{Profilo utente}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.9}{Amministrazione}{section.5}% 36
+\BOOKMARK [3][-]{subsubsection.5.9.1}{Conferma account}{subsection.5.9}% 37
+\BOOKMARK [3][-]{subsubsection.5.9.2}{Inserimento libro}{subsection.5.9}% 38
+\BOOKMARK [3][-]{subsubsection.5.9.3}{Rimozione commento}{subsection.5.9}% 39
+\BOOKMARK [1][-]{section.6}{Implementazione}{}% 40
+\BOOKMARK [1][-]{section.7}{Verifica e validazione}{}% 41
+\BOOKMARK [1][-]{section.8}{Analisi di usabilit\340}{}% 42

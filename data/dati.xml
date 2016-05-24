@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.bibliotecadiportobuffole.com" xmlns:x="http://www.bibliotecadiportobuffole.com" xsi:schemaLocation="http://www.bibliotecadiportobuffole.com schema.xsd">
+
+<Libri>
+	<libro ISBN="978-88-06-21646-7" lang="it">
+	<titolo>Norwegian wood</titolo>
+	<sottotitolo>Tokyo blues</sottotitolo>
+	<autore>
+		<nome>Haruki</nome>
+		<cognome>Murakami</cognome>
+	</autore>
+	<annoPubblicazione>1987</annoPubblicazione>
+	<edizione>
+		<casaEditrice>Einaudi</casaEditrice>
+		<edizione>1</edizione>
+		<collana>Super ET</collana>
+		<annoEdizione>2006</annoEdizione>
+		<ristampa>2015</ristampa>
+	</edizione>
+	<trama>
+	<p>Uno dei più clamorosi successi letterari giapponesi di tutti i tempi è anche il libro più intimo, introspettivo di Murakami, che qui si stacca dalle
+	atmosfere oniriche e surreali che lo hanno reso famoso, per esplorare il mondo in ombra dei sentimenti e della solitudine.</p>
+	<p><span xml:lang="en">Norwegian wood</span> è anche un grande romanzo sull'adolescenza, sul conflitto tra il desiderio di essere integrati nel mondo
+	degli altri per entrare vittoriosi nella vita adulta e il bisogno irrinunciabile di essere sé stessi, costi quel che costi. Come il giovane Holden, Toru è continuamente assalito dal dubbio di aver sbagliato o poter sbagliare nelle sue scelte di vita e di amore, ma è anche guidato da un ostinato e personale senso della morale e da un'istintiva avversione per tutto ciò che sa di costruito. Diviso tra due ragazze, Naoko e Midori, che lo attirano entrambe con forza irresistibile, Toru non può fare altro che decidere. O aspettare che la vita(e la morte) decidano per lui.</p>
+	</trama>
+	<copertina src="resources/libri/Norwegian_wood.png" alt="copertina di Norwegian wood"/>
+	<quantita>1</quantita>
+	</libro>
+	<libro ISBN="978-88-06-21646-7" lang="it">
+	<titolo>Libro titololo</titolo><autore>
+		<nome>Haruki</nome>
+		<cognome>ioo</cognome></autore>
+	<annoPubblicazione>2014</annoPubblicazione>
+	<edizione>
+		<casaEditrice>Einaudi</casaEditrice></edizione>
+	<trama>,jgdwvcljdvjvclsfvlhfvhHS.KVB.KHSBKHVBHKCVN .SBKHV</trama>
+	<copertina src="resources/libri/Norwegian_wood.png" alt=""/>
+	<quantita>1</quantita>
+	</libro>
+	</Libri>
+
+<Utenti>
+	<utente>
+		<user>maario</user>
+		<nome>Mario</nome>
+		<cognome>Rossi</cognome>
+		<annoNascita>1994</annoNascita>
+		<mail>mariorossi@gmail.com</mail>
+		<numeroTessera>000001</numeroTessera>
+		<password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password>
+	</utente>
+</Utenti>
+
+<Prenotazioni>
+	<prenotazione>
+		<libro>978-88-06-21646-7</libro>
+		<utente>maario</utente>
+		<dataInizio>2016-04-12</dataInizio>
+		<dataFine>2016-04-22</dataFine>
+		<restituito>1</restituito>
+		<dataRestituzione>2016-04-21</dataRestituzione>
+	</prenotazione>
+</Prenotazioni>
+
+<Prestiti>
+	<prestito>
+		<libro>978-88-06-21646-7</libro>
+		<tesseraUtente>000001</tesseraUtente>
+		<dataInizio>2016-04-13</dataInizio>
+		<dataFine>2016-04-22</dataFine>
+		<restituito>1</restituito>
+		<dataRestituzione>2016-04-21</dataRestituzione>
+	</prestito>
+</Prestiti>
+
+<Voti>
+	<voto>
+		<libro>978-88-06-21646-7</libro>
+		<utente>maario</utente>
+		<voto>8.5</voto>
+	</voto>
+</Voti>
+
+<Commenti>
+	<commento>
+		<libro>978-88-06-21646-7</libro>
+		<utente>maario</utente>
+		<commento><p>Questo libro è molto profondo.</p></commento>
+	</commento>
+</Commenti>
+</x:biblioteca>

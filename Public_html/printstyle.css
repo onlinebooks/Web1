@@ -1,0 +1,103 @@
+
+/* parte condivisa tra tutte le pagine */ 
+
+#menu ul{
+display: none;
+}
+
+
+
+#path{
+
+display: none;
+
+}
+
+
+/* fine parte condivisa tra tutte le pagine*/
+
+
+/* inizio home */
+
+.contenitore-img .immagine img {
+
+display: none;
+
+}
+
+.contenitore-img .immagine a{
+	
+
+display: none;
+}
+
+/*fine home*/
+
+
+/* inizio login */
+
+#login{
+
+display: none;
+
+}
+
+/* fine login */
+
+
+/* inizio libri */
+
+
+#ricerca form{
+
+display: none;
+
+}
+
+.libro img{
+
+display: none;
+
+}
+
+.libro a{
+
+display: none;
+
+}
+
+/* fine libri */
+
+/* inizio registrazione */
+
+#centra h1{
+
+display: none;
+
+}
+
+#centra .form_interna form{
+
+display: none;
+
+}
+
+/* fine registrazione */
+
+
+/* inizio contatti */
+
+.capo{
+
+display: block;
+
+}
+
+#contatti form{
+
+display: none;
+
+}
+
+/* fine contatti */
+

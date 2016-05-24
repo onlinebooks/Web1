@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://www.LibroOnline.com"
-    targetNamespace="http://www.LibroOnline.com"
+    xmlns="http://www.bibliotecadiportobuffole.com"
+    targetNamespace="http://www.bibliotecadiportobuffole.com"
     elementFormDefault="qualified">
 
 <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -130,21 +130,29 @@
 
 <xsd:complexType name="tUtente">
 	<xsd:sequence>
-		<xsd:element name="user" type="xsd:id"/>
+		<xsd:element name="user" type="xsd:ID"/>
 		<xsd:element name="nome" type="xsd:string"/>
 		<xsd:element name="secondoNome" type="xsd:string" minOccurs="0"/>
 		<xsd:element name="cognome" type="xsd:string"/>
-		<xsd:element name="eta" type="xsd:integer"/>
+		<xsd:element name="annoNascita" type="xsd:integer"/>
 		<xsd:element name="mail" type="tMail"/>
-		<xsd:element name="numeroTessera" type="tTessera"/>
+		<xsd:element name="numeroTessera" type="xsd:string" minOccurs="0"/>
 		<xsd:element name="password" type="tPassword"/>
 	</xsd:sequence>
 </xsd:complexType>
 
 
-<xsd:complexType name="tMail"/>
-<xsd:complexType name="tTessera"/>
-<xsd:complexType name="tPassword"/>
+<xsd:simpleType name="tMail"> 
+    <xsd:restriction base="xsd:string"> 
+      <xsd:pattern value="[a-zA-Z0-9\.]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,4}"/> 
+    </xsd:restriction> 
+  </xsd:simpleType>
+
+<xsd:simpleType name="tPassword"> 
+    <xsd:restriction base="xsd:string"> 
+      <xsd:pattern value=".{40}"/> 
+    </xsd:restriction> 
+  </xsd:simpleType>
 
 
 
@@ -157,7 +165,7 @@
 <xsd:complexType name="tPrenotazione">
 	<xsd:sequence>
 		<xsd:element name="libro" type="tIsbn"/>
-		<xsd:element name="utente" type="xsd:string"/>
+		<xsd:element name="utente" type="xsd:IDREF"/>
 		<xsd:element name="dataInizio" type="xsd:date"/>
 		<xsd:element name="dataFine" type="xsd:date"/>
 		<xsd:element name="restituito" type="xsd:integer"/>
@@ -171,7 +179,16 @@
 	</xsd:sequence>
 </xsd:complexType>
 
-<xsd:complexType name="tPrestito"/>
+<xsd:complexType name="tPrestito">
+	<xsd:sequence>
+		<xsd:element name="libro" type="tIsbn"/>
+		<xsd:element name="tesseraUtente" type="xsd:string"/>
+		<xsd:element name="dataInizio" type="xsd:date"/>
+		<xsd:element name="dataFine" type="xsd:date"/>
+		<xsd:element name="restituito" type="xsd:integer"/>
+		<xsd:element name="dataRestituzione" type="xsd:date" minOccurs="0"/>
+	</xsd:sequence>
+</xsd:complexType>
 
 <xsd:complexType name="tVoti">
 	<xsd:sequence maxOccurs="unbounded" minOccurs="0">
@@ -182,8 +199,8 @@
 <xsd:complexType name="tVoto">
 	<xsd:sequence>
 		<xsd:element name="libro" type="tIsbn"/>
-		<xsd:element name="utente" type="xsd:string"/>
-		<xsd:element name="voto" type="xsd:float"/>
+		<xsd:element name="utente" type="xsd:IDREF"/>
+		<xsd:element name="voto" type="xsd:decimal"/>
 	</xsd:sequence>
 </xsd:complexType>
 
@@ -196,7 +213,7 @@
 <xsd:complexType name="tCommento">
 	<xsd:sequence>
 		<xsd:element name="libro" type="tIsbn"/>
-		<xsd:element name="utente" type="xsd:string"/>
+		<xsd:element name="utente" type="xsd:IDREF"/>
 		<xsd:element name="commento" type="testo"/>
 	</xsd:sequence>
 </xsd:complexType>

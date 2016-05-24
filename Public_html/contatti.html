@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='it' lang='it'>
+<head>
+	<title>Contatti - Biblioteca di Portbuffolè</title>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+	<meta name='title' content='Contatti - Biblioteca di Portbuffolè' />
+	<meta name='description' content='pagina relativa ai contatti della biblioteca di Portobuffolè' />
+	<meta name='keywords' content='contatti biblioteca Portobuffolè' />
+	<meta name='language' content='italian it' />
+	<meta name='author' content='ideastudioweb' />
+	<link href='../Public_html/style.css' rel='stylesheet' type='text/css' media='screen'/>
+	<link rel='stylesheet' href='../Public_html/printstyle.css' type='text/css' media='print'/>	
+	<link rel='stylesheet' href='../Public_html/mobilestyle.css' type='text/css' media='handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'/>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Fredoka+One%7cShadows+Into+Light+Two%7cCherry+Cream+Soda%7cCinzel+Decorative' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div id='header'>
+		<img id='logo' src='../Public_html/resources/img/logo_comune.png' alt='logo comune di Portobuffole'/>			
+		<div id='titolo'>
+			<h1>Biblioteca di Portobuffolè</h1>
+			<span id='infoLuogoHeader'>Comune di Portobuffolè (TV) - Piazza Vittorio Emanuele II, 31040</span>
+			<span id='infoContattiHeader'>Telefono: 0422 850020 - email:</span>
+		</div>
+</div>
+	<div id="main">
+		<div id="menu">
+			<ul>
+				<li><a href="../cgi_bin/index.cgi" tabindex="0">Home</a></li>
+				<li><a href="../cgi_bin/libri.cgi" tabindex="1">Catalogo</a></li>
+				<li><span class="selected">Contatti</span></li>	
+				<li><a href="servizi.html" tabindex="2">Servizi</a></li>
+				<li><a href="../cgi_bin/registrazione.cgi" tabindex="3">Registrati</a></li>
+				<li><a href="../cgi_bin/login.cgi" tabindex="4">Login</a></li>
+			</ul>
+		</div>
+		
+		<div id="contenuto">
+				<span id="path">Ti trovi in: <a href="../cgi_bin/index.cgi" xml:lang="en">Home</a> &gt;&gt; Contatti </span>
+				<h2>Dove trovarci</h2>
+				<p>La biblioteca si trova in Piazza Vittorio Emanuele II a Portobuffole (TV) ed è aperta da martedì a venerdì dalle 9.00 alle 13.00 e  dalle 14.30 alle 18.30. Il sabato dalle 9.00 alle 13.00.</p>
+				
+				<h2>Come contattarci</h2>
+				<p>Chiama il numero 0422 850020 oppure invia una email compilando i dati qui sotto</p>
+				<form id="formContatti"caction='inserimentoLibri.cgi' method='post'>
+					<fieldset><legend>Compila i dati</legend>
+						<label for='nome'>Nome</label><input type='text' name='nome' id='nome'/>
+						<label for='email'>Email</label><input type='text' name='email' id='email'/>
+						<label for='messaggio'>Messaggio</label><textarea rows="10" cols="50" name='messaggio' id='messaggio'></textarea>
+						<input type='submit' name='submit' id='submit' value='Invia'/>
+					</fieldset>
+				</form>
+		</div>
+	</div>
+	<div id="footer">
+		<span id="infoFooter">
+			<span id="infoLuogo">Comune di Portobuffolè (TV) - Piazza Vittorio Emanuele II, 31040</span>
+			<span id="infoContatti">Telefono: 0422 850020 - email:</span>
+		</span>
+</div>
+</body>
+</html>
