@@ -1,6 +1,3 @@
-#!perl
-#!C:\Users\GINO\Documents\OFFLINE\XAMPP\perl\bin\perl.exe
-#!C:\xampp\perl\bin\perl.exe
 #!/usr/bin/perl
 
 use CGI;
