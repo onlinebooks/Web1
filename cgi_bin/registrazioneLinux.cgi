@@ -9,8 +9,7 @@ print "Content-type: text/html\n\n";
 
 sub printContenuto{
 	
-	print "<div id='centra'>
-				<h1>Iscriviti:</h1>
+	print "	<h1>Iscriviti:</h1>
 				<div class='form_interna'>
 				<form  action='' method='post' onsubmit='return check_registrazione()'>
 				 <fieldset>
@@ -20,7 +19,7 @@ sub printContenuto{
 					<span class='capo'> Cognome:</span>
 					<input name='cognome' title='cognome' type='text' id='cognome'/>
 					<span class='capo'> Data di nascita:</span>
-					
+					<label for='giorno'>Giorno</label>
 					<select name='giorno' id='giorno'>
 						<option>1</option>
 						<option>2</option>
@@ -54,7 +53,7 @@ sub printContenuto{
 						<option>30</option>
 						<option>31</option>
 					</select>
-				
+				<label for='mese'>Mese</label>
 					<select name='mese' id='mese'>
 						<option>Gen</option>
 						<option>Feb</option>
@@ -69,7 +68,7 @@ sub printContenuto{
 						<option>Nov</option>
 						<option>Dic</option>
 						</select>
-						
+						<label for='anno'>Anno</label>
 					<select name='anno' id='anno'>
 						<option> 2015 </option>
 						<option> 2014 </option>

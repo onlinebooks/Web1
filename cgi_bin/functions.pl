@@ -46,6 +46,7 @@ print"
 	<meta name='keywords' content='$keywords' />
 	<meta name='language' content='italian it' />
 	<meta name='author' content='ideastudioweb' />
+	<meta http-equiv='Content-Script-Type' content='text/javascript'/>
 	<link href='../Public_html/style.css' rel='stylesheet' type='text/css' media='screen'/>
 	<link rel='stylesheet' href='../Public_html/printstyle.css' type='text/css' media='print'/>	
 	<link rel='stylesheet' href='../Public_html/mobilestyle.css' type='text/css' media='handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'/>
@@ -120,8 +121,12 @@ sub printMain{
 	print "<div id='main'>";
 	printMenu($pag,\@pagine);
 	print "<div id='contenuto'><span id='path'>Ti trovi in:";
-	if($pag eq "Home"){print " <span xml:lang='en'>Home</span> ";}
-	else{print" <a href='index.cgi' xml:lang='en'>Home</a> &gt;&gt; $pag ";}
+	if($pag eq "Home"){
+		print " <span xml:lang='en'>Home</span> ";
+	}
+	else{
+		print" <span xml:lang='en'>Home &gt;&gt; $pag </span> ";
+	}
 	print "</span>";
 	printContenuto();	
 	print "</div></div>";
