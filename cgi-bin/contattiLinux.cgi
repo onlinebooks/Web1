@@ -8,9 +8,7 @@ require 'functions.pl';
 print "Content-type: text/html\n\n";
 
 sub printContenuto{
-print "<div id='contenuto'>
-				<span id='path'>Ti trovi in: <a href='../cgi_bin/index.cgi' xml:lang='en'>Home</a> &gt;&gt; Contatti </span>
-				<h2>Dove trovarci</h2>
+print "	<h2>Dove trovarci</h2>
 				<p>La biblioteca si trova in Piazza Vittorio Emanuele II a Portobuffole (TV) ed è aperta da martedì a venerdì dalle 9.00 alle 13.00 e  dalle 14.30 alle 18.30. Il sabato dalle 9.00 alle 13.00.</p>
 				
 				<h2>Come contattarci</h2>

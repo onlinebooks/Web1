@@ -6,6 +6,8 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
 
+require 'functions.pl';
+
 print "Content-type: text/html\n\n";
 
 
@@ -34,7 +36,7 @@ $session->delete();
 $session->flush();
 }
 
-sub printContenuto(){
+sub printFormAdmin(){
 	
 	print<<EOF;
 
@@ -79,7 +81,7 @@ if(!$password){
 		}
 		
 	else{
-	printContenuto();
+	printFormAdmin();
 	
 	}
 }
