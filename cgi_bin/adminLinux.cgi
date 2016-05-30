@@ -84,9 +84,3 @@ else{
 
 }
 
-print<<EOF;
-
-</body>
-</html>
-
-EOF

@@ -6,6 +6,8 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
 
+require 'functions.pl';
+
 print "Content-type: text/html\n\n";
 
 print<<EOF;
