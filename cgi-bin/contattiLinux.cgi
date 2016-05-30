@@ -13,7 +13,7 @@ print "	<h2>Dove trovarci</h2>
 				
 				<h2>Come contattarci</h2>
 				<p>Chiama il numero 0422 850020 oppure invia una email compilando i dati qui sotto</p>
-				<form id='formContatti' caction='inserimentoLibri.cgi' method='post'>
+				<form id='formContatti' action='inserimentoLibri.cgi' method='post'>
 					<fieldset><legend>Compila i dati</legend>
 						<label for='nome'>Nome</label><input type='text' name='nome' id='nome'/>
 						<label for='email'>Email</label><input type='text' name='email' id='email'/>
@@ -21,7 +21,7 @@ print "	<h2>Dove trovarci</h2>
 						<input type='submit' name='submit' id='submit' value='Invia'/>
 					</fieldset>
 				</form>
-		</div>";
+		";
 }
 
 printHead('Contatti - Biblioteca di Portobuffolè','pagina contatti biblioteca di Portobuffolè','contatti biblioteca Portobuffolè');
