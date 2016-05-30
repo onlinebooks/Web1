@@ -8,7 +8,7 @@ require 'functions.pl';
 print "Content-type: text/html\n\n";
 
 sub printContenuto{
-	print"<div id='contenuto'>
+	print"<div id='contenuto_regole'>
 				<h2> Norme di funzionamento del servizio di prestito</h2>
 				<dl id='listService'>
 					<dt>Iscrizione al servizio di prestito</dt>
@@ -36,7 +36,7 @@ sub printContenuto{
 					<dt>Restituzione</dt>
 						<dd>
 						I libri in prestito devono essere restituiti presso la sede della biblioteca entro la data di scadenza. La mancata riconsegna dei libri nei termini previsti comporta l’adozione automatica di provvedimenti sospensivi dal servizio di prestito.
-
+						</dd>
 
 				
 				</dl>
