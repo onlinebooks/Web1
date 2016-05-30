@@ -32,7 +32,27 @@ my $SID = $session->id();
 $session->close();
 $session->delete();
 $session->flush();
-}		
+}
+
+sub printContenuto(){
+	
+	print<<EOF;
+
+	<form id="form-admin" action="admin.cgi" method="post">
+	<!-- dentro tag form c'era onSubmit="" rimosso perchè non valido -->
+	<fieldset>
+		<legend>Effettua il Login</legend>
+			<label id="label-pwd">Inserisci la password</label>
+			<!-- rimosso variabile password da campo value(perchè era li?) -->
+			<input type="password" name="pwd" id="pwd" value="password"/><br />
+			<input type="submit" name="submit" class="submit" value="Login"/>
+	</fieldset>
+	</form>
+
+
+EOF
+	
+	}		
 
 # modifica
 
@@ -59,21 +79,7 @@ if(!$password){
 		}
 		
 	else{
-	
-print<<EOF;
-
-	<form id="form-admin" action="admin.cgi" method="post">
-	<!-- dentro tag form c'era onSubmit="" rimosso perchè non valido -->
-	<fieldset>
-		<legend>Effettua il Login</legend>
-			<label id="label-pwd">Inserisci la password</label>
-			<input type="password" name="pwd" id="pwd" value="$password"/><br />
-			<input type="submit" name="submit" class="submit" value="Login"/>
-	</fieldset>
-	</form>
-
-
-EOF
+	printContenuto();
 	
 	}
 }
