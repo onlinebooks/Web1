@@ -7,95 +7,12 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
 
+require 'functions.pl';
+
+
 print "Content-type: text/html\n\n";
 
-print<<EOF;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<head>
-	<title>Libri - Libronline</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="title" content="" />
-	<meta name="description" content="Home page del sito del progetto" />
-	<meta name="keywords" content="libraria Padova" />
-	<meta name="language" content="italian it" />
-	<meta name="author" content="stefano" />
-	<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
-	<link rel="stylesheet" href="printstyle.css" type="text/css" media="print"/>	
-	<link rel="stylesheet" href="mobilestyle.css" type="text/css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"/>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Fredoka+One%7cShadows+Into+Light+Two%7cCherry+Cream+Soda%7cCinzel+Decorative" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="javascript/libri.js"></script>
-</head>
-<body>
-	<div id="header">
-		<span id="logo"></span>
-		<h1> Libronline</h1>
-		<h2> il tuo libro a portata di mano ovunque sei</h2>
-	</div>
-		<div id="main">
-			<div id="menu">
-				<ul>
-					<li><a href="index.html" tabindex="0">Home</a></li>
-					<li>Libri</li>
-					<li><a href="contatti.html"  tabindex="1">Contatti</a></li>	
-					<li><a href="registrazione.html" tabindex="2">Registrati</a></li>
-					<li><a href="login.html" tabindex="3">Entra</a></li>
-				</ul>
-			</div>
-		<div id="contenuto">
-		<div id="path">
-			Ti trovi in: <a href="index.html" xml:lang="en">Home</a> » Libri
-		</div>
-			EOF
-
-sub createSession() {
-		my $session = new CGI::Session();
-		$session->param('pwd',my $password);
-}
-
-
-sub getPwd() {
-	my $session = CGI::Session->load() or die $!;
-	if ($session->is_expired || $session->is_empty ) {
-		return undef;
-		}	
- 	else {
-		my $pwd = $session->param('pwd');
-		return $pwd;
-		}
-}
-
-sub destroySession() {
-my $session = CGI::Session->load() or die $!;
-my $SID = $session->id();
-$session->close();
-$session->delete();
-$session->flush();
-}		
-
-# modifica
-
-my $page = new CGI;
-createSession();
-my $password=getPwd();
-
-if(!$password){
-
-	my $submit=$page->param('submit');  
-	if($submit){
-	
-		$password=$page->param('pwd'); 
-		if($password eq "admin"){
-			print "<h1>BENVENUTO</h1>";
-			}
-		else
-			{print "<h1>ERRORE</h1>";}
-		}
-		
-	else{
+sub printContenuto{
 	
 print<<EOF;
 		<div id="ricerca">
@@ -115,19 +32,7 @@ print<<EOF;
 					<input type="reset" name="reset" id="reset" value="Reset"/>
 				</fieldset>		
 			</form>
-		</div>
-EOF
-	
-	}
-}
-
-else{
-
-	print "<h1>LOGGED</h1>";
-
-}
-
-print<<EOF;		
+		</div>	
 		
 		<div class="libro">
 			<img class="immagini" src="immagini/allegiant.jpg" alt="Copertina Allegiant"/>
@@ -165,3 +70,10 @@ print<<EOF;
 </body>
 </html>
 EOF
+
+}
+
+#need $title $description $keywords
+printHead('Catalogo - Biblioteca di Portobuffolè','pagina catalogo del sito della biblioteca comunale di Portobuffolè','catalogo biblioteca Portobuffolè');
+
+printBody("Catalogo");
