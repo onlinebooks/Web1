@@ -1,10 +1,12 @@
- #!/usr/bin/perl
+#!/usr/bin/perl
 
 use warnings;
 use strict;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
+
+require 'functions.pl';
 
 print "Content-type: text/html\n\n";
 

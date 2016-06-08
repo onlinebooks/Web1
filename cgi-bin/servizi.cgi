@@ -1,4 +1,4 @@
-#!perl
+#!/usr/bin/perl
 
 use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
@@ -42,7 +42,7 @@ sub printContenuto{
 					<dt>Restituzione</dt>
 						<dd>
 						I libri in prestito devono essere restituiti presso la sede della biblioteca entro la data di scadenza. La mancata riconsegna dei libri nei termini previsti comporta l’adozione automatica di provvedimenti sospensivi dal servizio di prestito.
-
+</dd>
 
 				
 				</dl>
