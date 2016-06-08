@@ -1,59 +1,181 @@
-
-
-
-
-
-/*parte condivisa tra tutte le pagine */
-
-
-input[type=submit],input[type=reset]{
-
-padding: 1em;
-width: 49%;
-margin-top: 1em;
-margin-bottom: 1em;
+/*generale*/
+*{
+padding: 0em;
+margin: 0em;
 }
 
-input[type=text],input[type=password]{
+body{
+font-family: 'Montserrat', sans-serif;
+color:#191970;
+}
+h2{
+	background-color:#191970;
+	color:white;
+	margin-top:2%;
+	margin-bottom:2%;
+	clear:both;
+	padding:0.5%;
+	font-size:1.2em;
+	text-align:center;
+}
 
-padding: 0.5em;
+p{
+	display:table;
+	width:90%;
+	margin:0 auto;
+	
+}
+
+/*header*/
+
+#header{
+	width:100%;
+	margin:0 auto;
+	border-bottom:1em solid #191970;
+	color:#191970;
+	display:table;
+	padding-top:0.5em;
 
 }
 
 #logo{
-
-display: none;
+	width:20%;
+	display:block;
+	margin-left:2%;
 }
 
+#titolo{
+	display:table;
+	float:left;
+	width:75%;
+	
+}
 
+#titolo h1{	
+	font-family: 'Cinzel Decorative', cursive;
+	text-align:left;
+	font-size:1.5em;
+	margin-top:4%;
+}
 
+#infoLuogoHeader{
+	display:none;
 
-#header h1{
+}
 
-font-size :2em;
-text-align : center ;
+#infoContattiHeader{
+	display:none;
+
+}
+
+/*main*/
+#main{	
+	width:100%;
+	display:table;
+	margin:0 auto;
+	margin-top:2%;
+}
+#path{
+	width:100%;
+	text-align:center;
+	display:table;
+	margin-top:2%;
+}
+
+#menu{	
+	width:100%;
+	text-align:center;
+	border-bottom:0.2em solid #191970;
 }
 
 
 
 #contenuto{
-
-clear: both;
-display :block;
-width: 100%;
-
+	width:100%;
 }
 
-/* inizio index */
+.capo{
+	display:block;
+}
 
+#footer{
+	text-align:center;
+	width:100%;	
+	margin-top:2%;
+	border-top:0.4em solid #191970;
+	margin-bottom:2%;
+	
+}
+#infoFooter{
+	font-size:0.8em;
+	width:90%;
+	margin:0 auto;
+	display:table;
+}
+
+.capo{
+	display:block;
+}
+
+
+
+
+/* INDEX */
+
+.contenitore-img{
+	background-color:white;
+	margin-bottom:2%;
+	display:table;
+	width:100%;
+}
 .immagine{
 
-clear:both;
-display :block;
-width : 100%;
+	display:table;
+	width:90%;
+	background-color:white;
+	border:1px solid #87CEEB;
+	margin-left:3%;
+	
 }
 
+
+
+
 /* fine index*/
+
+
+
+/*contatti*/
+#formContatti{
+	width:80%;
+	margin-left:6%;
+}
+#confermaInvioMail{
+	color:green;
+	width:100%;
+	display:table;
+	text-align:center;
+}
+
+/*servizi*/
+#listService{
+	width:90%;
+	margin:0 auto;
+	
+}
+#listService dt{
+	font-size:1.3em;
+
+}
+
+/*login*/
+.formLogin{
+	width:80%;
+	float:left;
+	margin-left:6%;
+	
+}
+
 
 
 /* inizio libri*/
@@ -82,40 +204,4 @@ display: block;
 
 /* fine libri*/
 
-/* inizio registrazione*/
 
-
-#centra{
-
-text-align: center;
-padding-left: 0em;
-padding-right: 0em;
-
-}
-
-
-/* fine registrazione*/
-
-
-/* inizio login*/
-
-#login{
-margin: 0;
-padding-top: 1.5em;
-padding-bottom: 1.5em;
-margin-top:1em; 
-margin-bottom: 1em;
-}
-
-/* fine login*/
-
-
-/* inizio contatti*/
-
-#contatti{
-  width:100%;
-}
-
-
-
-/* fine contatti*/

@@ -1,12 +1,10 @@
-#!/usr/bin/perl
+ #!/usr/bin/perl
 
 use warnings;
 use strict;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
-
-require 'functions.pl';
 
 print "Content-type: text/html\n\n";
 
@@ -34,13 +32,13 @@ print<<EOF;
 EOF
 
 sub createSession() {
-   my	$session = new CGI::Session();
-		$session->param('pwd',my $password);
+		$session = new CGI::Session();
+		$session->param('pwd', $password);
 }
 
 
 sub getPwd() {
-	my $session = CGI::Session->load() or die $!;
+	$session = CGI::Session->load() or die $!;
 	if ($session->is_expired || $session->is_empty ) {
 		return undef;
 		}	
@@ -51,8 +49,8 @@ sub getPwd() {
 }
 
 sub destroySession() {
-my $session = CGI::Session->load() or die $!;
-my $SID = $session->id();
+$session = CGI::Session->load() or die $!;
+$SID = $session->id();
 $session->close();
 $session->delete();
 $session->flush();
@@ -60,9 +58,9 @@ $session->flush();
 
 # modifica
 
-my $page = new CGI;
+$page = new CGI;
 createSession();
-my $password=getPwd();
+$password=getPwd();
 
 if(!$password){
 

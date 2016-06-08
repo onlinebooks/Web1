@@ -2,27 +2,27 @@
 my @pagine=(
 	{
 		nome => "Home",
-		url => "../cgi_bin/index.cgi",
+		url => "index.cgi",
 		lang => "en",
 	},
 	{
 		nome => "Catalogo",
-		url => "../cgi_bin/catalogo.cgi",
+		url => "catalogo.cgi",
 		lang => "it",
 	},
 	{
 		nome => "Contatti",
-		url => "../cgi_bin/contatti.cgi",
+		url => "contatti.cgi",
 		lang => "it",
 	},
 	{
 		nome => "Servizi",
-		url => "../cgi_bin/servizi.cgi",
+		url => "servizi.cgi",
 		lang => "it",
 	},
 	{
-		nome => "Login",
-		url => "../cgi_bin/login.cgi",
+		nome => "Accedi\n o Registrati",
+		url => "login.cgi",
 		lang => "it",
 	},
 	);
@@ -40,18 +40,19 @@ print"
 <head>
 	<title>$title</title>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 	<meta name='title' content='$title' />
 	<meta name='description' content='$description' />
 	<meta name='keywords' content='$keywords' />
 	<meta name='language' content='italian it' />
 	<meta name='author' content='ideastudioweb' />
 	<meta http-equiv='Content-Script-Type' content='text/javascript'/>
-	<link href='../Public_html/style.css' rel='stylesheet' type='text/css' media='screen'/>
+	<link href='../Public_html/style.css' rel='stylesheet' type='text/css' media='handheld, screen'/>
 	<link rel='stylesheet' href='../Public_html/printstyle.css' type='text/css' media='print'/>	
-	<link rel='stylesheet' href='../Public_html/mobilestyle.css' type='text/css' media='handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'/>
+	<link type='text/css' rel='stylesheet' href='../Public_html/mobilestyle.css' media='handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'/>
+	<link type='text/css' rel='stylesheet' href='../Public_html/printstyle.css' media='print'/>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat%7cMontserrat+Subrayada%7cIndie+Flower' rel='stylesheet' type='text/css' />
 	<link href='https://fonts.googleapis.com/css?family=Fredoka+One%7cShadows+Into+Light+Two%7cCherry+Cream+Soda%7cCinzel+Decorative' rel='stylesheet' type='text/css' />
+	<script type='text/javascript' src='../Public_html/javascript/check_form.js'></script>
 </head>
 ";
 }
@@ -72,6 +73,7 @@ sub printHeader{
 sub printMenu{
 	my $pag=$_[0];
 	my @pagine=@{$_[1]};
+	my $session=$_[2];
 
 	print"<div id='menu'>
 			<ul>";
@@ -81,6 +83,26 @@ sub printMenu{
 	#			<li><a href='registrazione.html' tabindex='3'>Registrati</a></li>
 	#			<li><a href='login.html' tabindex='4'>Entra</a></li>
 	my $indexnum=1;
+	
+	#my $username=$session->param("username");
+	#my $password=$session->param("password");
+	#my $log=&logged($session,$username,$password);
+	#if($log){
+	#	$pagine[$size-1]{nome}="Logout";
+	#	$pagine[$size-1]{url}="logout.cgi";
+	#	$pagine[$size-1]{lang}="en";
+	#}
+	my $loggato = $session->param('loggato');
+	if($loggato eq "loggato"){
+			$pagine[@pagine-1]{nome}="Logout";
+			$pagine[@pagine-1]{url}="logout.cgi";
+			$pagine[@pagine-1]{lang}="en";
+			}
+	else{
+			$pagine[@pagine-1]{nome}="Accedi\n o Registrati";
+			$pagine[@pagine-1]{url}="login.cgi";
+			$pagine[@pagine-1]{lang}="it";
+			}
 	for(my $zz=0;$zz<@pagine;$zz++) {
 		my %p=%{$pagine[$zz]};
 		my $nome=$p{nome};
@@ -118,15 +140,12 @@ print"
 
 sub printMain{
 	my $pag=$_[0];
+	my $session=$_[1];
 	print "<div id='main'>";
-	printMenu($pag,\@pagine);
+	printMenu($pag,\@pagine,$session);
 	print "<div id='contenuto'><span id='path'>Ti trovi in:";
-	if($pag eq "Home"){
-		print " <span xml:lang='en'>Home</span> ";
-	}
-	else{
-		print" <span xml:lang='en'>Home &gt;&gt; $pag </span> ";
-	}
+	if($pag eq "Home"){print " <span xml:lang='en'>Home</span> ";}
+	else{print" <a href='index.cgi' xml:lang='en'>Home</a> &gt;&gt; $pag ";}
 	print "</span>";
 	printContenuto();	
 	print "</div></div>";
@@ -135,9 +154,10 @@ sub printMain{
 
 sub printBody{
 	my $pag=$_[0];
+	my $session=$_[1];
 	print "<body>";
 	printHeader();
-	printMain($pag);
+	printMain($pag,$session);
 	printFooter();
 	print "</body></html>";
 }
@@ -196,9 +216,12 @@ close(OUT);
 
 sub login{
 	my $session=$_[0];
-	my $password=$_[1];
-	$password=sha1($password);
-	$session->param("password",$pass);
+	my $username=$_[1];
+	my $password=$_[2];
+	#$password=sha1($password);
+	$session->param( username => $username );
+	$session->param(password => $password);
+	$session->param(loggato => "loggato");
 	$session->expire('+8h');
 	$session->flush();
 }
@@ -206,39 +229,100 @@ sub login{
 
 sub logged{
 	my $session=$_[0];
+	my $username=$_[1];
+	my $password=$_[2];
 	if($session->is_expired || $session->is_empty){return 0;}
-	my $username=$session->param("username");
-	my $password=$session->param("password");
-	$password=sha1($password);
+	#$password=sha1($password);
 	my $file="../data/dati.xml";
 	my $parser=XML::LibXML->new()||die("Errore nella creazione del parser");
 	my $doc=$parser->parse_file($file)|| die("Errore nell'apertura del file xml");
 	my $radice=$doc->getDocumentElement();
 	$radice->setNamespace('http://www.bibliotecadiportobuffole.com','x');
 	
-	
-	
-
-	utf8::decode($username);
-	my $user=$radice->findnodes("//u:utente[user=\"$username\"]")->get_node(1);
-	
-	while(!eof(FILE)){
-		my $line=<FILE>;
-		if($pass eq ""){$pass=$line;}
-		else{$pass=$pass."\n".$line;}
-		}
-	close FILE;
-	if($vv eq $pass){return 1;}
+	foreach my $u($doc->findnodes('//x:utente')){
+			
+			my $un = $u->getElementsByTagName('user');
+			if($un eq $username){
+					my $pwd = $u->getElementsByTagName('password');
+					if($pwd eq $password){return 1;}
+					else{return 0;}
+				}
+			
+			
+			}
 	return 0;
 }
 
 sub logout{
 my $session=$_[0];
+$session->param("username","");
 $session->param("password","");
 $session->close();
 $session->delete();
 $session->flush();
 }
 
+sub checkLogin{
+	my $username=$_[0];
+	my $tag=$_[1];
+	my $password=$_[2];
+	my $file="../data/dati.xml";
+	my $parser=XML::LibXML->new()||die("Errore nella creazione del parser");
+	my $doc=$parser->parse_file($file)|| die("Errore nell'apertura del file xml");
+	my $radice=$doc->getDocumentElement();
+	$radice->setNamespace('http://www.bibliotecadiportobuffole.com','x');
+	if($tag eq 'user'){
+		foreach my $u($doc->findnodes('//x:utente')){			
+			my $un = $u->getElementsByTagName($tag);
+			if($un eq $username){
+					return 1;
+				}
+			}
+		return 0;}
+	else{
+		foreach my $u($doc->findnodes('//x:utente')){			
+			my $un = $u->getElementsByTagName('user');
+			if($un eq $username){
+					my $pwd = $u->getElementsByTagName($tag);
+					
+					if($pwd eq $password){return 1;}
+					else {return 0;}
+				}
+			}
+	
+		}
+}
+
+sub invia{
+my $nome=$_[0];
+my $email=$_[1];
+my $messaggio=$_[2];
+
+my $smtp = Net::SMTP::SSL->new('smtp.gmail.com',
+                    Port=> 465,
+                    Timeout => 10,
+                    Hello=>'smtp.gmail.com'
+                    );
+#print $smtp->domain,"\n";
+my $sender = "gino.zaidan\@gmail.com";
+my $password = "ginopace90.";
+$smtp->auth ( $sender, $password ) or die "could not authenticate\n";
+my $receiver = "gino.zaidan\@gmail.com";
+
+$smtp->mail($sender);
+$smtp->to($receiver);
+$smtp->data();
+$smtp->datasend("To: <$receiver> \n");
+$smtp->datasend("From: <$sender> \n");
+$smtp->datasend("Content-Type: text/html \n");
+$smtp->datasend("Subject: Biblioonline");
+$smtp->datasend("\n");
+$smtp->datasend("<br/>Mittente $nome - $email<br/><br/>$messaggio");
+$smtp->dataend();
+$smtp->quit();
+
+print "Content-type: text/html\n\n";
+
+}
 
 return 1;

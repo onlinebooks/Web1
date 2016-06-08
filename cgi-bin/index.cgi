@@ -1,36 +1,44 @@
 #!perl
-#!C:\Users\GINO\Documents\OFFLINE\XAMPP\perl\bin\perl.exe
-#!C:\xampp\perl\bin\perl.exe
-#!/usr/bin/perl
 
 use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
-#use CGI::Session;
+use CGI::Session;
+use CGI qw(:standard);
+use XML::LibXML;
 require 'functions.pl';
 
-print "Content-type: text/html\n\n";
+my $page = CGI->new;
+my $session = CGI::Session->new( undef, $page, { Directory => '/tmp' } )
+  or die CGI::Session->errstr;
+
+print $session->header(-charset => 'UTF-8');
 
 sub printContenuto{
 	print"<h2> Libri consigliati della settimana:</h2>
 
 			<div class='contenitore-img'>
 				<div class='immagine'>
+					<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/Divergent.jpg' alt='Copertina Divergent'/>
 					<a href='#' class='bottone'>Scopri di pi&ugrave;</a>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/insurgent.jpg' alt='Copertina Insurgent'/>
 					<a href='#' class='bottone'>Scopri di pi&ugrave;</a>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/allegiant.jpg' alt='Copertina Allegiant'/>
 					<a href='#' class='bottone'>Scopri di pi&ugrave;</a>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/vale.jpeg' alt='Copertina Valentino'/>
 					<a href='#' class='bottone'>Scopri di pi&ugrave;</a>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/anna_karenina.jpg' alt='Copertina Anna Karenina'/>
 					<a href='#' class='bottone'>Scopri di pi&ugrave;</a>
 				</div>
@@ -40,18 +48,23 @@ sub printContenuto{
 
 			<div class='contenitore-img'>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/delitto-e-castigo-dostoevskij.jpg' alt='Copertina Delitto e castigo'/>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/il-lungo-addio.jpg' alt='Copertina Il lungo addio'/>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/lovecraft_antologia.jpg' alt='Copertina Lovecraft'/>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/neve_di_primavera_mishima.png' alt='Copertina Neve di primavera'/>
 				</div>
 				<div class='immagine'>
+				<span class='titoloLibro'>Divergent</span>
 					<img src='immagini/norwegian_wood.jpg' alt='Copertina Norwegian wood'/>
 				</div>
 			</div>";
@@ -61,6 +74,6 @@ sub printContenuto{
 #need $title $description $keywords
 printHead('Home - Biblioteca di Portobuffolè','Home page del sito della biblioteca comunale di Portobuffolè','biblioteca Portobuffolè');
 
-printBody("Home");
+printBody("Home",$session);
 
 

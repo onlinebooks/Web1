@@ -9,6 +9,18 @@ font-family: 'Montserrat', sans-serif;
 color:#191970;
 }
 
+/* Catalogo */
+
+#risultatiRicerca{
+	background-color: rgba(171,205,239,1);
+	padding: 1%;
+}
+
+#risultatiRicerca .libro image{
+	width: 20%
+	border:1px solid black;
+}
+
 /*header*/
 
 #header{
@@ -66,7 +78,7 @@ color:#191970;
 
 #menu{	
 	float:left;
-	width:15%;
+	width:20%;
 }
 
 #menu ul{
@@ -94,7 +106,7 @@ color:#191970;
 }
 
 #contenuto{
-	width:85%;
+	width:80%;
 	float:left;
 }
 
@@ -132,32 +144,16 @@ color:#191970;
 	color:#87CEEB;
 }
 
-#formLogin{
-	
-	border:1px solid #87CEEB;
-	padding:0.5em;
-	width:90%;
-	margin:0 auto;
-}
-#formLogin fieldset{
-	border:none;
-}
 
-#formLogin input{
-	width: 90%;
-    line-height: 30px;
-    font-family: 'Montserrat', sans-serif;
-	font-size:1em;
-    margin:0 auto;
-	margin-top:0.5em;
-}
-
-#formLogin input[type=submit]{
-	width:30%;
-}
 
 
 /* INDEX */
+.titoloLibro{
+	display:table;
+	width:90%;
+	margin:0 auto;
+	text-align:center;
+}
 
 h2{
 	background-color:#191970;
@@ -248,81 +244,6 @@ h2{
 	margin-left:5%;
 }
 
-/* Contatti  */
-
-#invioMail label{
-display:block;
-width:98%;
-margin-top:.2em;
-margin-left:2%;
-}
-
-#invioMail textarea{
-width:90%;
-margin-left:5%;
-}
-
-#invioMail input{
-width:60%;
-margin-left:5%;
-}
-
-#invioMail #submit{
-width:5em;
-float:right;
-}
-
-#contatti {
-    width: 60%;
-    height: 60%;
-	margin:0 auto;
-	padding-bottom:1%;
-}
-
-.info{
-	position:relative;
-	border-width: 1px 1px 1px 1px;
-	border-style: solid; 
-	border-color: black;
-	padding-left:3%;
-	padding-right:3%;
-	margin-bottom:1%;
-	margin-top:8%;	
-	text-align:center;
-	padding-left:3%;
-	padding-right:3%;
-	padding-top:1%;
-}
-
-/* fine Contatti */
-
-/* Registrazione */
-
-#centra{
-	padding-left:30%;
-	padding-right:30%;
-	margin-bottom:1%;
-	margin-top:5%;
-}
-
-/* fine registrazione*/
-
-/* Login */
-
-#login{
-	margin-top:8%;
-	margin-left:30%;
-	margin-right:30%;
-	position:relative;
-	border-width: 1px 1px 1px 1px;
-	border-style: solid; 
-	border-color: black;
-	padding-left:10%;
-	padding-right:20%;
-	padding-top:1%;
-	padding-bottom:1%;
-	margin-bottom:1%;
-}
 
 
 
@@ -366,20 +287,25 @@ form #submit{
 }
 
 
+
 #formContatti{
+	
 	width:90%;
 	margin:0 auto;
+	margin-top:3%;
+	padding:1em;
+	border:1px solid #191970;
 }
 
 #formContatti fieldset{
-	padding:1em;
+	border:none;
 }
 
 #formContatti label{
 	margin-top:2%;
 }
 
-#formContatti input{
+#formContatti input,textarea{
 	width:100%;
 	font-size:1.2em;
 	font-family: 'Montserrat', sans-serif;
@@ -398,30 +324,58 @@ form #submit{
 .formLogin{
 	width:40%;
 	float:left;
-	margin-left:5%;
-	
+	margin-left:3.5%;
+	display:table;
+	border:1px solid #191970;
+	padding:1em;
+	margin-top:2%;
 }
 
 .formLogin fieldset{
-	padding:1em;
+	border:none;
+	
 }
-
 
 .formLogin label{
 	margin-top:5%;
+	margin-left:4%;
 }
 
 .formLogin input{
-	width:100%;
+	width:90%;
 	font-size:1.2em;
+	margin:0 auto;
 	font-family: 'Montserrat', sans-serif;
 }
 
-.formLogin input[type=submit]{
+.formLogin #submit,#submitR{
 	margin-top:2%;
 	font-size:1em;
-	width:30%;
+	width:65%;
 }
+
+.erroreInserimento{
+	color: rgb(250,30,0);
+}
+
+#confermaInvioMail{
+	margin-top:2%;
+	color:green;
+}
+
+/*catalogo*/
+input[type=checkbox]{
+display:none;
+cursor:pointer;
+}
+#show-elenco:checked ~ #elenco{
+display: table;
+}	
+#elenco{width:100%;display:none;}
+#elenco li{display:block;width:100%;}
+#label-show-elenco:hover{cursor:pointer;}
+#label-show-elenco {text-decoration:underline;}
+
 
 /* Footer */
 

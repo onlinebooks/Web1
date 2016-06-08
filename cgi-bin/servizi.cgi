@@ -1,16 +1,20 @@
-#!C:\Users\GINO\Documents\OFFLINE\XAMPP\perl\bin\perl.exe
-#!C:\xampp\perl\bin\perl.exe
-#!/usr/bin/perl
+#!perl
 
 use CGI;
 use CGI::Carp qw(fatalsToBrowser); 
 use CGI::Session;
+use CGI qw(:standard);
+use XML::LibXML;
 require 'functions.pl';
 
-print "Content-type: text/html\n\n";
+my $page = CGI->new;
+my $session = CGI::Session->new( undef, $page, { Directory => '/tmp' } )
+  or die CGI::Session->errstr;
+
+print $session->header(-charset => 'UTF-8');
 
 sub printContenuto{
-	print"<div id='contenuto'>
+	print"
 				<h2> Norme di funzionamento del servizio di prestito</h2>
 				<dl id='listService'>
 					<dt>Iscrizione al servizio di prestito</dt>
@@ -42,11 +46,10 @@ sub printContenuto{
 
 				
 				</dl>
-	
-	</div>";
+	";
 }
 
 #need $title $description $keywords
 printHead('Servizi - Biblioteca di Portobuffolè','Pagina relativa ai servizi offerti dalla biblioteca comunale di Portobuffolè','biblioteca Portobuffolè servizi');
 
-printBody("Servizi");
+printBody("Servizi",$session);

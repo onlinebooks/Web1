@@ -1,7 +1,84 @@
 
 /* parte condivisa tra tutte le pagine */ 
+*{
+padding: 0em;
+margin: 0em;
+}
 
-#menu ul{
+body{
+font-family: 'Montserrat', sans-serif;
+color:#191970;
+}
+h2{
+	width:100%;
+	color:#191970;
+	margin-top:2%;
+	margin-bottom:2%;
+	clear:both;
+	padding:0.5%;
+	font-size:1.2em;
+	text-align:left;
+}
+
+p{
+	display:table;
+	width:100%;
+
+	
+}
+#main{	
+	width:90%;
+	display:table;
+	margin:0 auto;
+	margin-top:2%;
+}
+#contenuto{
+	width:100%;
+
+}
+
+/*header*/
+#header{
+	width:90%;
+	margin:0 auto;
+	border-bottom:2px solid #191970;
+	color:#191970;
+	display:table;
+	padding-top:0.5em;
+}
+
+
+#logo{
+	display:block;
+	float:left;
+	width:20%;
+	
+}
+
+#titolo{
+	display:table;
+	padding-left:0.5em;
+	width:75%;
+	margin-top:5%;
+}
+
+#titolo h1{	
+	font-family: 'Cinzel Decorative', cursive;
+	font-size:1.8em;
+}
+
+
+#footer{
+	border-top:2px solid #191970;
+	width:90%;
+	margin:0 auto;
+	text-align:center;
+	margin-top:2%;
+	padding-top:0.5em;
+}
+
+
+#menu{
 display: none;
 }
 
@@ -30,19 +107,106 @@ display: none;
 
 display: none;
 }
+.immagine{
+	margin-bottom:2%;
+}
+
+
 
 /*fine home*/
 
-
-/* inizio login */
-
-#login{
-
-display: none;
-
+/*contatti*/
+#formContatti{
+	
+	width:90%;
+	margin:0 auto;
+	margin-top:3%;
+	padding:1em;
+	border:1px solid #191970;
 }
 
-/* fine login */
+#formContatti fieldset{
+	border:none;
+}
+
+#formContatti label{
+	margin-top:2%;
+}
+
+#formContatti input,textarea{
+	width:100%;
+	font-size:1.2em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#formContatti  #submit{
+	margin-top:2%;
+	font-size:1em;
+	width:30%;
+}
+
+#formContatti #messaggio{
+	width:100%;
+}
+
+/*servizi*/
+
+#listService{
+	width:100%;
+}
+
+#listService dt{
+	font-size:1.5em;
+	margin-top:2%;
+	margin-bottom:1%;
+}
+
+#listService dd{
+	margin-left:5%;
+}
+
+/*login*/
+.formLogin{
+	width:40%;
+	float:left;
+	margin-left:3.3%;
+	display:table;
+	border:1px solid #191970;
+	padding:1em;
+	margin-top:2%;
+}
+
+.formLogin fieldset{
+	border:none;
+	
+}
+
+.formLogin label{
+	margin-top:5%;
+	margin-left:4%;
+}
+
+.formLogin input{
+	width:90%;
+	font-size:1.2em;
+	margin:0 auto;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.formLogin #submit,#submitR{
+	margin-top:2%;
+	font-size:1em;
+	width:65%;
+}
+
+.erroreInserimento{
+	color: rgb(250,30,0);
+}
+
+#confermaInvioMail{
+	color:green;
+}
+
 
 
 /* inizio libri */
@@ -68,36 +232,8 @@ display: none;
 
 /* fine libri */
 
-/* inizio registrazione */
-
-#centra h1{
-
-display: none;
-
-}
-
-#centra .form_interna form{
-
-display: none;
-
-}
-
-/* fine registrazione */
 
 
-/* inizio contatti */
 
-.capo{
 
-display: block;
-
-}
-
-#contatti form{
-
-display: none;
-
-}
-
-/* fine contatti */
 

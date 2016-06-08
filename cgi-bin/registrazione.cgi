@@ -20,7 +20,7 @@ print<<EOF;
 	<meta name="description" content="Home page del sito del progetto" />
 	<meta name="keywords" content="libraria Padova" />
 	<meta name="language" content="italian it" />
-	<meta name="author" content="stefano" />
+	<meta name="author" content="root" />
 	<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
 	<link rel="stylesheet" href="printstyle.css" type="text/css" media="print"/>	
 	<link rel="stylesheet" href="mobilestyle.css" type="text/css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"/>
@@ -52,13 +52,13 @@ print<<EOF;
 				EOF
 
 sub createSession() {
-		my $session = new CGI::Session();
+		$session = new CGI::Session();
 		$session->param('pwd', $password);
 }
 
 
 sub getPwd() {
-	my $session = CGI::Session->load() or die $!;
+	$session = CGI::Session->load() or die $!;
 	if ($session->is_expired || $session->is_empty ) {
 		return undef;
 		}	
@@ -69,8 +69,8 @@ sub getPwd() {
 }
 
 sub destroySession() {
-my $session = CGI::Session->load() or die $!;
-my $SID = $session->id();
+$session = CGI::Session->load() or die $!;
+$SID = $session->id();
 $session->close();
 $session->delete();
 $session->flush();
@@ -78,9 +78,9 @@ $session->flush();
 
 # modifica
 
-my $page = new CGI;
+$page = new CGI;
 createSession();
-my $password=getPwd();
+$password=getPwd();
 
 if(!$password){
 

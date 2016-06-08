@@ -26,30 +26,80 @@
 	<copertina src="resources/libri/Norwegian_wood.png" alt="copertina di Norwegian wood"/>
 	<quantita>1</quantita>
 	</libro>
-	<libro ISBN="978-88-06-21646-7" lang="it">
-	<titolo>Libro titololo</titolo><autore>
-		<nome>Haruki</nome>
-		<cognome>ioo</cognome></autore>
-	<annoPubblicazione>2014</annoPubblicazione>
-	<edizione>
-		<casaEditrice>Einaudi</casaEditrice></edizione>
-	<trama>,jgdwvcljdvjvclsfvlhfvhHS.KVB.KHSBKHVBHKCVN .SBKHV</trama>
-	<copertina src="resources/libri/Norwegian_wood.png" alt=""/>
-	<quantita>1</quantita>
-	</libro>
-	</Libri>
+	<libro ISBN="978-1-85326-041-4" lang="en">
+			<titolo>Il grande Gatsby</titolo><autore>
+			<nome>Scott</nome>
+			<cognome>Fitzgerald</cognome><secondoNome>Francis</secondoNome></autore>
+			<annoPubblicazione>1925</annoPubblicazione>
+			<edizione>
+			<casaEditrice>Wordsorth classics</casaEditrice></edizione>
+			<trama><p>Ambientato a <span xml:lang="en">New York</span> e a <span xml:lang="en">Long Island</span> durante l'estate del 1922, Il grande Gatsby è il più acuto ritratto dell'anima dell'età del <span xml:lang="en">jazz</span>, con le sue contraddizioni, il suo vittimismo e la sua tragicità. La storia, che seguendo la tecnica di <span xml:lang="en">Henry James</span> viene raccontata da uno dei personaggi, narra la tragedia del mito americano che aveva retto il paese dai tempi dello sbarco a <span xml:lang="en">Plymouth Rock</span> e può essere considerata l'autobiografia spirituale di Fitzgerald che, ad un certo punto della sua vita, chiuso con l'alcolismo e con la vita da <span xml:lang="en">playboy</span>, voleva capire quali fossero stati gli ostacoli che avevano fatto inabissare la sua esistenza.</p></trama>
+			<copertina src="../Public_html/resources/copertineLibri/il_grande_gatsby.jpg" alt="Copertina del libro il grande Gatsby"/>
+			<quantita>1</quantita>
+			</libro>
+			</Libri>
 
 <Utenti>
 	<utente>
-		<user>maario</user>
+		<user>mario94</user>
 		<nome>Mario</nome>
 		<cognome>Rossi</cognome>
 		<annoNascita>1994</annoNascita>
 		<mail>mariorossi@gmail.com</mail>
 		<numeroTessera>000001</numeroTessera>
-		<password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password>
+		<password>ciaograzie</password>
 	</utente>
-</Utenti>
+	<utente>
+		<user>mario96</user>
+		<nome>Mario</nome>
+		<cognome>Rossi</cognome>
+		<annoNascita>1994</annoNascita>
+		<mail>mariorossi@gmail.com</mail>
+		<numeroTessera>000001</numeroTessera>
+		<password>ciaograzie</password>
+	</utente>
+
+				<utente>
+					<user>zaidan90</user>
+					<nome>Gino</nome>
+					<cognome>Zaidan</cognome>
+					<annoNascita>1990</annoNascita>
+					<mail>zaidan90@hotmail.it</mail>
+					<password>ciaograzie</password>
+				</utente>				
+				<utente>
+					<user>fbizzaro</user>
+					<nome>Francesco</nome>
+					<cognome>Bizzaro</cognome>
+					<annoNascita>1994</annoNascita>
+					<mail>fbizzaro@gmail.com</mail>
+					<password>123sweg123</password>
+				</utente>
+				<utente>
+					<user>gbruni</user>
+					<nome>Giorgio</nome>
+					<cognome>Bruni</cognome>
+					<annoNascita>1987</annoNascita>
+					<mail>gbruni@gmail.com</mail>
+					<password>ciaograzie</password>
+				</utente>
+				<utente>
+					<user>enriquad</user>
+					<nome>Enrico</nome>
+					<cognome>Chiara</cognome>
+					<annoNascita>1991</annoNascita>
+					<mail>enriquad@gmail.com</mail>
+					<password>ciaograzie</password>
+				</utente>
+				<utente>
+					<user>boriky</user>
+					<nome>Riccardo</nome>
+					<cognome>Rizzo</cognome>
+					<annoNascita>1993</annoNascita>
+					<mail>boriky@gmail.com</mail>
+					<password>ciaograzie</password>
+				</utente>
+				</Utenti>
 
 <Prenotazioni>
 	<prenotazione>
